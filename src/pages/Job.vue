@@ -1,5 +1,5 @@
 <template>
-  <div class=job <div class="container-fluid">
+  <div class="container-fluid">
     <div class="row">
       <div class="col">
          <JobForm/>

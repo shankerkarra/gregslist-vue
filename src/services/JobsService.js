@@ -8,7 +8,7 @@ class JobsService {
     AppState.jobs = res.data
   }
   async getJobById(id) {
-    let res = await sandbox.get('/jobs/${id}')
+    let res = await sandbox.get(`/jobs/${id}`)
     AppState.activeJob = res.data
   }
   async createJob(job) {
@@ -18,7 +18,7 @@ class JobsService {
   }
   async destroy(id)
   {
-    await sandbox.delete('/jobs/${id}')
+    await sandbox.delete(`/jobs/${id}`)
     AppState.jobs =AppState.jobs.filter(jobs => jobs.id !== id)
   }
 }

@@ -52,7 +52,7 @@
         <input
           type="text"
           name="description"
-          v-model="state.newHouse.description"
+          v-model="state.newJob.description"
           class="form-control"
           placeholder="Description..."
           maxlength="240"
