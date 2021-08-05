@@ -25,7 +25,6 @@ const routes = [
     name: 'House',
     component: House
   },
-  ,
   {
     path: '/',
     name: 'Job',

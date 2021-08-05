@@ -1,6 +1,6 @@
 <template>
   <div class="job-detials-page">
-    {{jobTitle}}
+    {{jobTitle}}-{{company}}
   <button class="btn btn-danger" @click="destroy">Delete</button>
   </div>
 </template>
@@ -17,14 +17,14 @@ export default {
     const router = useRouter()
     onMounted(async() => {
       try{
-        await jobsSerive.getJobsById(route.params.id)
+        await jobsService.getJobsById(route.params.id)
       }catch(error){
         console.error(error)
       }
     })
     return{
       job:computed (()=> AppState.activeJob),
-      async: destroy(){
+      async destroy(){
         try{
           await jobsService.destroy(route.params.id)
           route.push({name: 'Home'})
@@ -38,6 +38,6 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 
 </style>
